@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<unattend xmlns="urn:schemas-microsoft-com:unattend">
+    <settings pass="specialize">
+	<component name="Microsoft-Windows-Deployment" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State">
+	    <RunSynchronous>
+		<RunSynchronousCommand wcm:action="add">
+		    <Path>NET USER Administrator ZAQ!2wsxCDE# /ACTIVE:YES /EXPIRES:NEVER</Path>
+		    <Order>1</Order>
+		</RunSynchronousCommand>
+		<RunSynchronousCommand wcm:action="add">
+		    <Order>2</Order>
+		    <Path>NETSH ADVFIREWALL FIREWALL ADD RULE NAME="ICMP ALLOW INCOMING V4 ECHO REQUEST" PROTOCOL=ICMPV4:8,ANY DIR=IN ACTION=ALLOW</Path>
+		</RunSynchronousCommand>
+	    </RunSynchronous>
+	</component>
+    </settings>
+    <settings pass="oobeSystem">
+	<component name="Microsoft-Windows-International-Core" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State">
+	    <InputLocale>0409:00000409</InputLocale>
+	    <UserLocale>en-US</UserLocale>
+	    <UILanguage>en-US</UILanguage>
+	    <SystemLocale>en-US</SystemLocale>
+	</component>
+	<component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State">
+	    <OOBE>
+		<HideEULAPage>true</HideEULAPage>
+		<HideLocalAccountScreen>true</HideLocalAccountScreen>
+		<HideOEMRegistrationScreen>true</HideOEMRegistrationScreen>
+		<HideOnlineAccountScreens>true</HideOnlineAccountScreens>
+		<HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
+		<NetworkLocation>Work</NetworkLocation>
+		<ProtectYourPC>1</ProtectYourPC>
+	    </OOBE>
+	</component>
+    </settings>
+</unattend>

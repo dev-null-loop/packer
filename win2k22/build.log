@@ -1,0 +1,291 @@
+$ PACKER_LOG=1 packer build .
+2025/02/22 13:32:18 [INFO] Packer version: 1.12.0 [go1.22.9 linux amd64]
+2025/02/22 13:32:18 [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2025/02/22 13:32:18 [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/bd/.packerconfig
+2025/02/22 13:32:18 [WARN] Config file doesn't exist: /home/bd/.packerconfig
+2025/02/22 13:32:18 [INFO] Setting cache directory: /home/bd/.cache/packer
+2025/02/22 13:32:18 [ERR] Checkpoint error: EOF
+2025/02/22 13:32:18 [TRACE] listing potential installations for "github.com/hashicorp/qemu" that match "~> 1". plugingetter.ListInstallationsOptions{PluginDirectory:"/home/bd/.config/packer/plugins", BinaryInstallationOptions:plugingetter.BinaryInstallationOptions{APIVersionMajor:"5", APIVersionMinor:"0", OS:"linux", ARCH:"amd64", Ext:"", Checksummers:[]plugingetter.Checksummer{plugingetter.Checksummer{Type:"sha256", Hash:(*sha256.digest)(0xc0001a8900)}}, ReleasesOnly:false}}
+2025/02/22 13:32:18 [TRACE] Found the following "github.com/hashicorp/qemu" installations: [{/home/bd/.config/packer/plugins/github.com/hashicorp/qemu/packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 v1.1.1 x5.0}]
+2025/02/22 13:32:18 [INFO] found external [-packer-default-plugin-name-] builders from qemu plugin
+2025/02/22 13:32:18 [TRACE] listing potential installations for <nil> that match "". plugingetter.ListInstallationsOptions{PluginDirectory:"/home/bd/.config/packer/plugins", BinaryInstallationOptions:plugingetter.BinaryInstallationOptions{APIVersionMajor:"5", APIVersionMinor:"0", OS:"linux", ARCH:"amd64", Ext:"", Checksummers:[]plugingetter.Checksummer{plugingetter.Checksummer{Type:"sha256", Hash:(*sha256.digest)(0xc000048180)}}, ReleasesOnly:false}}
+2025/02/22 13:32:18 [INFO] found external [-packer-default-plugin-name-] builders from qemu plugin
+2025/02/22 13:32:18 [TRACE] validateValue: not active for iso_checksum, so skipping
+2025/02/22 13:32:18 [TRACE] validateValue: not active for output_directory, so skipping
+2025/02/22 13:32:18 [TRACE] validateValue: not active for shutdown_command, so skipping
+2025/02/22 13:32:18 [TRACE] validateValue: not active for winrm_timeout, so skipping
+2025/02/22 13:32:18 [TRACE] validateValue: not active for disk_interface, so skipping
+2025/02/22 13:32:18 [TRACE] validateValue: not active for headless, so skipping
+2025/02/22 13:32:18 [TRACE] validateValue: not active for floppy_files, so skipping
+2025/02/22 13:32:18 [TRACE] validateValue: not active for format, so skipping
+2025/02/22 13:32:18 [TRACE] validateValue: not active for http_port_min, so skipping
+2025/02/22 13:32:18 [TRACE] validateValue: not active for iso_url, so skipping
+2025/02/22 13:32:18 [TRACE] validateValue: not active for net_device, so skipping
+2025/02/22 13:32:18 [TRACE] validateValue: not active for disk_compression, so skipping
+2025/02/22 13:32:18 [TRACE] validateValue: not active for floppy_dirs, so skipping
+2025/02/22 13:32:18 [TRACE] validateValue: not active for qemuargs, so skipping
+2025/02/22 13:32:18 [TRACE] validateValue: not active for vm_name, so skipping
+2025/02/22 13:32:18 [TRACE] validateValue: not active for skip_compaction, so skipping
+2025/02/22 13:32:18 [TRACE] validateValue: not active for winrm_password, so skipping
+2025/02/22 13:32:18 [TRACE] validateValue: not active for winrm_username, so skipping
+2025/02/22 13:32:18 [TRACE] validateValue: not active for disk_size, so skipping
+2025/02/22 13:32:18 [TRACE] validateValue: not active for http_port_max, so skipping
+2025/02/22 13:32:18 [TRACE] Using protobuf for communication with plugins
+2025/02/22 13:32:18 [INFO] Starting external plugin /home/bd/.config/packer/plugins/github.com/hashicorp/qemu/packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 start builder --protobuf -packer-default-plugin-name-
+2025/02/22 13:32:18 Starting plugin: /home/bd/.config/packer/plugins/github.com/hashicorp/qemu/packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 []string{"/home/bd/.config/packer/plugins/github.com/hashicorp/qemu/packer-plugin-qemu_v1.1.1_x5.0_linux_amd64", "start", "builder", "--protobuf", "-packer-default-plugin-name-"}
+2025/02/22 13:32:18 Waiting for RPC address for: /home/bd/.config/packer/plugins/github.com/hashicorp/qemu/packer-plugin-qemu_v1.1.1_x5.0_linux_amd64
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Plugin address: unix /tmp/packer-plugin3896846545
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Waiting for connection...
+2025/02/22 13:32:18 Received unix RPC address for /home/bd/.config/packer/plugins/github.com/hashicorp/qemu/packer-plugin-qemu_v1.1.1_x5.0_linux_amd64: addr is /tmp/packer-plugin3896846545
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Serving a plugin connection...
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 [TRACE] starting builder -packer-default-plugin-name-
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 [DEBUG] - common: sending ConfigSpec as protobuf
+2025/02/22 13:32:18 [DEBUG] - common: receiving ConfigSpec as protobuf
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 use detected accelerator: kvm
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 MemorySize 0 is too small, using default: 512
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 [DEBUG] - common: sending ConfigSpec as protobuf
+2025/02/22 13:32:18 [DEBUG] - common: receiving ConfigSpec as protobuf
+2025/02/22 13:32:18 [INFO] Starting external plugin /home/bd/bin/packer execute --protobuf packer-post-processor-shell-local
+2025/02/22 13:32:18 Starting plugin: /home/bd/bin/packer []string{"/home/bd/bin/packer", "execute", "--protobuf", "packer-post-processor-shell-local"}
+2025/02/22 13:32:18 Waiting for RPC address for: /home/bd/bin/packer
+2025/02/22 13:32:18 packer-post-processor-shell-local plugin: [INFO] Packer version: 1.12.0 [go1.22.9 linux amd64]
+2025/02/22 13:32:18 packer-post-processor-shell-local plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2025/02/22 13:32:18 packer-post-processor-shell-local plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/bd/.packerconfig
+2025/02/22 13:32:18 packer-post-processor-shell-local plugin: [WARN] Config file doesn't exist: /home/bd/.packerconfig
+2025/02/22 13:32:18 packer-post-processor-shell-local plugin: [INFO] Setting cache directory: /home/bd/.cache/packer
+2025/02/22 13:32:18 packer-post-processor-shell-local plugin: [ERR] Checkpoint error: EOF
+2025/02/22 13:32:18 packer-post-processor-shell-local plugin: Plugin address: unix /tmp/packer-plugin1537506988
+2025/02/22 13:32:18 packer-post-processor-shell-local plugin: Waiting for connection...
+2025/02/22 13:32:18 Received unix RPC address for /home/bd/bin/packer: addr is /tmp/packer-plugin1537506988
+2025/02/22 13:32:18 packer-post-processor-shell-local plugin: Serving a plugin connection...
+2025/02/22 13:32:18 packer-post-processor-shell-local plugin: [DEBUG] - common: sending ConfigSpec as protobuf
+2025/02/22 13:32:18 [DEBUG] - common: receiving ConfigSpec as protobuf
+2025/02/22 13:32:18 packer-post-processor-shell-local plugin: [DEBUG] - common: sending ConfigSpec as protobuf
+2025/02/22 13:32:18 [DEBUG] - common: receiving ConfigSpec as protobuf
+a checksum is highly recommended.
+
+  on sources.pkr.hcl line 1:
+  (source code not available)
+
+2025/02/22 13:32:18 Build debug mode: false
+2025/02/22 13:32:18 Force build: false
+2025/02/22 13:32:18 On error:
+2025/02/22 13:32:18 Waiting on builds to complete...
+2025/02/22 13:32:18 Starting build run: qemu.win2k22-x64
+Warning: A checksum of 'none' was specified. Since ISO files are so big,
+2025/02/22 13:32:18 Running builder: qemu
+2025/02/22 13:32:18 [INFO] (telemetry) Starting builder qemu.win2k22-x64
+a checksum is highly recommended.
+
+  on sources.pkr.hcl line 1:
+  (source code not available)
+
+
+qemu.win2k22-x64: output will be in this color.
+
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Qemu path: /usr/bin/qemu-system-x86_64, Qemu Image path: /usr/bin/qemu-img
+==> qemu.win2k22-x64: Retrieving ISO
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Acquiring lock for: /home/bd/iso/SERVER_EVAL_x64FRE_en-us.iso (/home/bd/.cache/packer/9c6374590cabeee1241c699e985f0198e9c1f5d6.iso.lock)
+==> qemu.win2k22-x64: Trying /home/bd/iso/SERVER_EVAL_x64FRE_en-us.iso
+==> qemu.win2k22-x64: Trying /home/bd/iso/SERVER_EVAL_x64FRE_en-us.iso
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Leaving retrieve loop for ISO
+==> qemu.win2k22-x64: /home/bd/iso/SERVER_EVAL_x64FRE_en-us.iso => /home/bd/iso/SERVER_EVAL_x64FRE_en-us.iso
+==> qemu.win2k22-x64: Creating floppy disk...
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Floppy path: /tmp/packer2599473938
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Initializing block device backed by temporary file
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Formatting the block device with a FAT filesystem...
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Initializing FAT filesystem on block device
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Reading the root directory from the filesystem
+    qemu.win2k22-x64: Copying files flatly from floppy_files
+    qemu.win2k22-x64: Copying file: floppy/scripts/WinRM.ps1
+    qemu.win2k22-x64: Copying file: floppy/scripts/autounattend.xml
+    qemu.win2k22-x64: Copying file: floppy/scripts/SETUP.BAT
+    qemu.win2k22-x64: Copying file: floppy/scripts/sysprep.xml
+    qemu.win2k22-x64: Copying file: floppy/scripts/unattend.xml
+    qemu.win2k22-x64: Done copying files from floppy_files
+    qemu.win2k22-x64: Collecting paths from floppy_dirs
+    qemu.win2k22-x64: Resulting paths from floppy_dirs : [floppy/drivers/virtio/vioscsi floppy/drivers/virtio/NetKVM]
+    qemu.win2k22-x64: Recursively copying : floppy/drivers/virtio/vioscsi
+    qemu.win2k22-x64: Recursively copying : floppy/drivers/virtio/NetKVM
+    qemu.win2k22-x64: Done copying paths from floppy_dirs
+    qemu.win2k22-x64: Copying files from floppy_content
+    qemu.win2k22-x64: Done copying files from floppy_content
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 No CD files specified. CD disk will not be made.
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 [INFO] Creating disk with Path: win2k22-x64-20250222/win2k22-x64-20250222.qcow2 and Size: 16384M
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Executing qemu-img: []string{"create", "-f", "qcow2", "win2k22-x64-20250222/win2k22-x64-20250222.qcow2", "16384M"}
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 stdout: Formatting 'win2k22-x64-20250222/win2k22-x64-20250222.qcow2', fmt=qcow2 cluster_size=65536 extended_l2=off compression_type=zlib size=17179869184 lazy_refcounts=off refcount_bits=16
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 stderr:
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Found available port: 8888 on IP: 0.0.0.0
+==> qemu.win2k22-x64: Starting HTTP server on port 8888
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Looking for available communicator (SSH, WinRM, etc) port between 2222 and 4444
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Found available port: 2455 on IP: 127.0.0.1
+==> qemu.win2k22-x64: Found port for communicator (SSH, WinRM, etc): 2455.
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Looking for available port between 5900 and 6000 on 127.0.0.1
+==> qemu.win2k22-x64: Looking for available port between 5900 and 6000 on 127.0.0.1
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Found available port: 5977 on IP: 127.0.0.1
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Found available VNC port: 5977 on IP: 127.0.0.1
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Qemu --version output: QEMU emulator version 8.2.8 (qemu-8.2.8-2.fc40)
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: Copyright (c) 2003-2023 Fabrice Bellard and the QEMU Project developers
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Qemu version: 8.2.8
+==> qemu.win2k22-x64: Starting VM, booting from CD-ROM
+==> qemu.win2k22-x64: Overriding default Qemu arguments with qemuargs template option...
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Executing /usr/bin/qemu-system-x86_64: []string{"-cpu", "host", "-smp", "1", "-netdev", "user,id=user.0,hostfwd=tcp::2455-:5985", "-device", "virtio-scsi-pci,id=scsi0", "-device", "scsi-hd,bus=scsi0.0,drive=drive0", "-device", "virtio-net-pci,netdev=user.0", "-m", "2048", "-display", "gtk", "-drive", "if=none,file=win2k22-x64-20250222/win2k22-x64-20250222.qcow2,id=drive0,cache=writeback,discard=ignore,format=qcow2", "-drive", "file=/home/bd/iso/SERVER_EVAL_x64FRE_en-us.iso,media=cdrom", "-boot", "once=d", "-name", "win2k22-x64-20250222.qcow2", "-machine", "type=pc,accel=kvm", "-vnc", "127.0.0.1:77", "-fda", "/tmp/packer2599473938"}
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Started Qemu. Pid: 220166
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Qemu stderr: WARNING: Image format was not specified for '/tmp/packer2599473938' and probing guessed raw.
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Qemu stderr:          Automatically detecting the format is dangerous for raw images, write operations on block 0 will be restricted.
+2025/02/22 13:32:18 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:18 Qemu stderr:          Specify the 'raw' format explicitly to remove the restrictions.
+==> qemu.win2k22-x64: Waiting 10s for boot...
+==> qemu.win2k22-x64: Connecting to VM via VNC (127.0.0.1:5977)
+2025/02/22 13:32:30 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:30 Connected to VNC desktop: QEMU (win2k22-x64-20250222.qcow2)
+==> qemu.win2k22-x64: Typing the boot commands over VNC...
+    qemu.win2k22-x64: Not using a NetBridge -- skipping StepWaitGuestAddress
+==> qemu.win2k22-x64: Using WinRM communicator to connect: 127.0.0.1
+2025/02/22 13:32:30 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:30 Waiting for WinRM, up to timeout: 18m0s
+2025/02/22 13:32:30 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:30 [INFO] Attempting WinRM connection...
+2025/02/22 13:32:30 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:32:30 [DEBUG] connecting to remote shell using WinRM
+==> qemu.win2k22-x64: Waiting for WinRM to become available...
+2025/02/22 13:33:45 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:33:45 [ERROR] connection error: unknown error Post "http://127.0.0.1:2455/wsman": read tcp 127.0.0.1:37650->127.0.0.1:2455: read: connection reset by peer
+2025/02/22 13:33:45 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:33:45 [ERROR] WinRM connection err: unknown error Post "http://127.0.0.1:2455/wsman": read tcp 127.0.0.1:37650->127.0.0.1:2455: read: connection reset by peer
+2025/02/22 13:33:50 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:33:50 [INFO] Attempting WinRM connection...
+2025/02/22 13:33:50 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:33:50 [DEBUG] connecting to remote shell using WinRM
+2025/02/22 13:35:05 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:35:05 [ERROR] connection error: unknown error Post "http://127.0.0.1:2455/wsman": read tcp 127.0.0.1:50646->127.0.0.1:2455: read: connection reset by peer
+2025/02/22 13:35:05 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:35:05 [ERROR] WinRM connection err: unknown error Post "http://127.0.0.1:2455/wsman": read tcp 127.0.0.1:50646->127.0.0.1:2455: read: connection reset by peer
+2025/02/22 13:35:10 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:35:10 [INFO] Attempting WinRM connection...
+2025/02/22 13:35:10 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:35:10 [DEBUG] connecting to remote shell using WinRM
+2025/02/22 13:36:04 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:36:04 [ERROR] connection error: http response error: 401 - invalid content type
+2025/02/22 13:36:04 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:36:04 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/02/22 13:36:09 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:36:09 [INFO] Attempting WinRM connection...
+2025/02/22 13:36:09 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:36:09 [DEBUG] connecting to remote shell using WinRM
+2025/02/22 13:36:09 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:36:09 [ERROR] connection error: http response error: 401 - invalid content type
+2025/02/22 13:36:09 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:36:09 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/02/22 13:36:14 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:36:14 [INFO] Attempting WinRM connection...
+2025/02/22 13:36:14 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:36:14 [DEBUG] connecting to remote shell using WinRM
+2025/02/22 13:36:14 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:36:14 [ERROR] connection error: http response error: 401 - invalid content type
+2025/02/22 13:36:14 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:36:14 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/02/22 13:36:19 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:36:19 [INFO] Attempting WinRM connection...
+2025/02/22 13:36:19 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:36:19 [DEBUG] connecting to remote shell using WinRM
+2025/02/22 13:37:01 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:01 [ERROR] connection error: http response error: 401 - invalid content type
+2025/02/22 13:37:01 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:01 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/02/22 13:37:06 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:06 [INFO] Attempting WinRM connection...
+2025/02/22 13:37:06 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:06 [DEBUG] connecting to remote shell using WinRM
+2025/02/22 13:37:06 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:06 [ERROR] connection error: http response error: 401 - invalid content type
+2025/02/22 13:37:06 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:06 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/02/22 13:37:11 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:11 [INFO] Attempting WinRM connection...
+2025/02/22 13:37:11 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:11 [DEBUG] connecting to remote shell using WinRM
+2025/02/22 13:37:11 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:11 [ERROR] connection error: http response error: 401 - invalid content type
+2025/02/22 13:37:11 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:11 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/02/22 13:37:16 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:16 [INFO] Attempting WinRM connection...
+2025/02/22 13:37:16 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:16 [DEBUG] connecting to remote shell using WinRM
+2025/02/22 13:37:16 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:16 [ERROR] connection error: http response error: 401 - invalid content type
+2025/02/22 13:37:16 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:16 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/02/22 13:37:21 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:21 [INFO] Attempting WinRM connection...
+2025/02/22 13:37:21 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:21 [DEBUG] connecting to remote shell using WinRM
+2025/02/22 13:37:21 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:21 [ERROR] connection error: http response error: 401 - invalid content type
+2025/02/22 13:37:21 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:21 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/02/22 13:37:26 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:26 [INFO] Attempting WinRM connection...
+2025/02/22 13:37:26 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:26 [DEBUG] connecting to remote shell using WinRM
+2025/02/22 13:37:26 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:26 [ERROR] connection error: http response error: 401 - invalid content type
+2025/02/22 13:37:26 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:26 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/02/22 13:37:31 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:31 [INFO] Attempting WinRM connection...
+2025/02/22 13:37:31 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:31 [DEBUG] connecting to remote shell using WinRM
+2025/02/22 13:37:31 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:31 [ERROR] connection error: http response error: 401 - invalid content type
+2025/02/22 13:37:31 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:31 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/02/22 13:37:36 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:36 [INFO] Attempting WinRM connection...
+2025/02/22 13:37:36 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:36 [DEBUG] connecting to remote shell using WinRM
+2025/02/22 13:37:36 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:36 [ERROR] connection error: http response error: 401 - invalid content type
+2025/02/22 13:37:36 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:36 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/02/22 13:37:41 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:41 [INFO] Attempting WinRM connection...
+2025/02/22 13:37:41 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:41 [DEBUG] connecting to remote shell using WinRM
+2025/02/22 13:37:41 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:41 [ERROR] connection error: http response error: 401 - invalid content type
+2025/02/22 13:37:41 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:41 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/02/22 13:37:46 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:46 [INFO] Attempting WinRM connection...
+2025/02/22 13:37:46 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:46 [DEBUG] connecting to remote shell using WinRM
+2025/02/22 13:37:46 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:46 [ERROR] connection error: http response error: 401 - invalid content type
+2025/02/22 13:37:46 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:46 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/02/22 13:37:51 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:51 [INFO] Attempting WinRM connection...
+2025/02/22 13:37:51 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:51 [DEBUG] connecting to remote shell using WinRM
+2025/02/22 13:37:51 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:51 [ERROR] connection error: http response error: 401 - invalid content type
+2025/02/22 13:37:51 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:51 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/02/22 13:37:56 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:56 [INFO] Attempting WinRM connection...
+2025/02/22 13:37:56 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:56 [DEBUG] connecting to remote shell using WinRM
+2025/02/22 13:37:56 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:56 [ERROR] connection error: http response error: 401 - invalid content type
+2025/02/22 13:37:56 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:37:56 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/02/22 13:38:01 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:01 [INFO] Attempting WinRM connection...
+2025/02/22 13:38:01 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:01 [DEBUG] connecting to remote shell using WinRM
+2025/02/22 13:38:01 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:01 [ERROR] connection error: http response error: 401 - invalid content type
+2025/02/22 13:38:01 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:01 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/02/22 13:38:06 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:06 [INFO] Attempting WinRM connection...
+2025/02/22 13:38:06 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:06 [DEBUG] connecting to remote shell using WinRM
+2025/02/22 13:38:06 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:06 [ERROR] connection error: http response error: 401 - invalid content type
+2025/02/22 13:38:06 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:06 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/02/22 13:38:11 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:11 [INFO] Attempting WinRM connection...
+2025/02/22 13:38:11 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:11 [DEBUG] connecting to remote shell using WinRM
+2025/02/22 13:38:11 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:11 [ERROR] connection error: http response error: 401 - invalid content type
+2025/02/22 13:38:11 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:11 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/02/22 13:38:16 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:16 [INFO] Attempting WinRM connection...
+2025/02/22 13:38:16 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:16 [DEBUG] connecting to remote shell using WinRM
+2025/02/22 13:38:16 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:16 [ERROR] connection error: http response error: 401 - invalid content type
+2025/02/22 13:38:16 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:16 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/02/22 13:38:21 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:21 [INFO] Attempting WinRM connection...
+2025/02/22 13:38:21 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:21 [DEBUG] connecting to remote shell using WinRM
+2025/02/22 13:38:21 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:21 [ERROR] connection error: http response error: 401 - invalid content type
+2025/02/22 13:38:21 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:21 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/02/22 13:38:26 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:26 [INFO] Attempting WinRM connection...
+2025/02/22 13:38:26 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:26 [DEBUG] connecting to remote shell using WinRM
+2025/02/22 13:38:32 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:32 Checking that WinRM is connected with: 'powershell.exe -EncodedCommand JABQAHIAbwBnAHIAZQBzAHMAUAByAGUAZgBlAHIAZQBuAGMAZQAgAD0AIAAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwA7AGkAZgAgACgAVABlAHMAdAAtAFAAYQB0AGgAIAB2AGEAcgBpAGEAYgBsAGUAOgBnAGwAbwBiAGEAbAA6AFAAcgBvAGcAcgBlAHMAcwBQAHIAZQBmAGUAcgBlAG4AYwBlACkAewAkAFAAcgBvAGcAcgBlAHMAcwBQAHIAZQBmAGUAcgBlAG4AYwBlAD0AJwBTAGkAbABlAG4AdABsAHkAQwBvAG4AdABpAG4AdQBlACcAfQA7ACAAZQBjAGgAbwAgACIAVwBpAG4AUgBNACAAYwBvAG4AbgBlAGMAdABlAGQALgAiAA=='
+2025/02/22 13:38:32 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:32 [INFO] starting remote command: powershell.exe -EncodedCommand JABQAHIAbwBnAHIAZQBzAHMAUAByAGUAZgBlAHIAZQBuAGMAZQAgAD0AIAAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwA7AGkAZgAgACgAVABlAHMAdAAtAFAAYQB0AGgAIAB2AGEAcgBpAGEAYgBsAGUAOgBnAGwAbwBiAGEAbAA6AFAAcgBvAGcAcgBlAHMAcwBQAHIAZQBmAGUAcgBlAG4AYwBlACkAewAkAFAAcgBvAGcAcgBlAHMAcwBQAHIAZQBmAGUAcgBlAG4AYwBlAD0AJwBTAGkAbABlAG4AdABsAHkAQwBvAG4AdABpAG4AdQBlACcAfQA7ACAAZQBjAGgAbwAgACIAVwBpAG4AUgBNACAAYwBvAG4AbgBlAGMAdABlAGQALgAiAA==
+2025/02/22 13:38:37 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:37 [INFO] command 'powershell.exe -EncodedCommand JABQAHIAbwBnAHIAZQBzAHMAUAByAGUAZgBlAHIAZQBuAGMAZQAgAD0AIAAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwA7AGkAZgAgACgAVABlAHMAdAAtAFAAYQB0AGgAIAB2AGEAcgBpAGEAYgBsAGUAOgBnAGwAbwBiAGEAbAA6AFAAcgBvAGcAcgBlAHMAcwBQAHIAZQBmAGUAcgBlAG4AYwBlACkAewAkAFAAcgBvAGcAcgBlAHMAcwBQAHIAZQBmAGUAcgBlAG4AYwBlAD0AJwBTAGkAbABlAG4AdABsAHkAQwBvAG4AdABpAG4AdQBlACcAfQA7ACAAZQBjAGgAbwAgACIAVwBpAG4AUgBNACAAYwBvAG4AbgBlAGMAdABlAGQALgAiAA==' exited with code: 0
+    qemu.win2k22-x64: WinRM connected.
+2025/02/22 13:38:37 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:37 Connected to machine
+==> qemu.win2k22-x64: Connected to WinRM!
+2025/02/22 13:38:37 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:37 Running the provision hook
+2025/02/22 13:38:37 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:37 Executing shutdown command: C:\Windows\System32\Sysprep\sysprep /generalize /oobe /shutdown /unattend:"A:\sysprep.xml"
+==> qemu.win2k22-x64: Gracefully halting virtual machine...
+2025/02/22 13:38:37 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:38:37 [INFO] starting remote command: C:\Windows\System32\Sysprep\sysprep /generalize /oobe /shutdown /unattend:"A:\sysprep.xml"
+2025/02/22 13:39:19 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:39:19 [INFO] command 'C:\Windows\System32\Sysprep\sysprep /generalize /oobe /shutdown /unattend:"A:\sysprep.xml"' exited with code: 0
+2025/02/22 13:39:19 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:39:19 Waiting max 5m0s for shutdown to complete
+2025/02/22 13:39:27 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:39:27 VM shut down.
+==> qemu.win2k22-x64: Converting hard drive...
+2025/02/22 13:39:27 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:39:27 Executing qemu-img: []string{"convert", "-c", "-O", "qcow2", "win2k22-x64-20250222/win2k22-x64-20250222.qcow2", "win2k22-x64-20250222/win2k22-x64-20250222.qcow2.convert"}
+2025/02/22 13:41:31 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:41:31 stdout:
+2025/02/22 13:41:31 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:41:31 stderr:
+2025/02/22 13:41:32 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:41:32 failed to unlock port lockfile: close tcp 127.0.0.1:5977: use of closed network connection
+2025/02/22 13:41:32 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:41:32 failed to unlock port lockfile: close tcp 127.0.0.1:2455: use of closed network connection
+2025/02/22 13:41:32 packer-plugin-qemu_v1.1.1_x5.0_linux_amd64 plugin: 2025/02/22 13:41:32 Deleting floppy disk: /tmp/packer2599473938
+2025/02/22 13:41:32 [INFO] (telemetry) ending qemu.win2k22-x64
+2025/02/22 13:41:32 [INFO] (telemetry) Starting post-processor shell-local
+==> qemu.win2k22-x64: Running post-processor:  (type shell-local)
+2025/02/22 13:41:32 packer-post-processor-shell-local plugin: [DEBUG] - common: sending ConfigSpec as protobuf
+2025/02/22 13:41:32 [DEBUG] - common: receiving ConfigSpec as protobuf
+2025/02/22 13:41:32 packer-post-processor-shell-local plugin: [INFO] (shell-local): Prepending inline script with #!/bin/sh -e
+2025/02/22 13:41:32 packer-post-processor-shell-local plugin: [INFO] (shell-local): starting local command: /bin/sh -c PACKER_BUILDER_TYPE='qemu' PACKER_BUILD_NAME='win2k22-x64' PACKER_HTTP_ADDR='10.0.2.2:8888' PACKER_HTTP_IP='10.0.2.2' PACKER_HTTP_PORT='8888'  /tmp/packer-shell1032141543
+2025/02/22 13:41:32 packer-post-processor-shell-local plugin: [INFO] (shell-local communicator): Executing local shell command [/bin/sh -c PACKER_BUILDER_TYPE='qemu' PACKER_BUILD_NAME='win2k22-x64' PACKER_HTTP_ADDR='10.0.2.2:8888' PACKER_HTTP_IP='10.0.2.2' PACKER_HTTP_PORT='8888'  /tmp/packer-shell1032141543]
+==> qemu.win2k22-x64 (shell-local): Running local shell script: /tmp/packer-shell1032141543
+2025/02/22 13:41:35 [INFO] (telemetry) ending shell-local
+2025/02/22 13:41:35 Flagging to keep original artifact from post-processor 'shell-local'
+==> Wait completed after 9 minutes 16 seconds
+==> Builds finished. The artifacts of successful builds are:
+2025/02/22 13:41:35 machine readable: qemu.win2k22-x64,artifact-count []string{"2"}
+Build 'qemu.win2k22-x64' finished after 9 minutes 16 seconds.
+
+==> Wait completed after 9 minutes 16 seconds
+
+==> Builds finished. The artifacts of successful builds are:
+2025/02/22 13:41:35 machine readable: qemu.win2k22-x64,artifact []string{"0", "builder-id", "transcend.qemu"}
+2025/02/22 13:41:35 machine readable: qemu.win2k22-x64,artifact []string{"0", "id", "VM"}
+2025/02/22 13:41:35 machine readable: qemu.win2k22-x64,artifact []string{"0", "string", "VM files in directory: win2k22-x64-20250222"}
+2025/02/22 13:41:35 machine readable: qemu.win2k22-x64,artifact []string{"0", "files-count", "1"}
+2025/02/22 13:41:35 machine readable: qemu.win2k22-x64,artifact []string{"0", "file", "0", "win2k22-x64-20250222/win2k22-x64-20250222.qcow2"}
+2025/02/22 13:41:35 machine readable: qemu.win2k22-x64,artifact []string{"0", "end"}
+--> qemu.win2k22-x64: VM files in directory: win2k22-x64-20250222
+2025/02/22 13:41:35 machine readable: qemu.win2k22-x64,artifact []string{"1", "builder-id", "transcend.qemu"}
+2025/02/22 13:41:35 machine readable: qemu.win2k22-x64,artifact []string{"1", "id", "VM"}
+2025/02/22 13:41:35 machine readable: qemu.win2k22-x64,artifact []string{"1", "string", "VM files in directory: win2k22-x64-20250222"}
+2025/02/22 13:41:35 machine readable: qemu.win2k22-x64,artifact []string{"1", "files-count", "1"}
+2025/02/22 13:41:35 machine readable: qemu.win2k22-x64,artifact []string{"1", "file", "0", "win2k22-x64-20250222/win2k22-x64-20250222.qcow2"}
+2025/02/22 13:41:35 machine readable: qemu.win2k22-x64,artifact []string{"1", "end"}
+--> qemu.win2k22-x64: VM files in directory: win2k22-x64-20250222
+2025/02/22 13:41:35 [INFO] (telemetry) Finalizing.
+2025/02/22 13:41:35 waiting for all plugin processes to complete...
+2025/02/22 13:41:35 /home/bd/.config/packer/plugins/github.com/hashicorp/qemu/packer-plugin-qemu_v1.1.1_x5.0_linux_amd64: plugin process exited
+2025/02/22 13:41:35 /home/bd/bin/packer: plugin process exited
