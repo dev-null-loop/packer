@@ -1,6 +1,6 @@
-# Packer OCI Templates
+# OCI Templates (work-in-progress)
 
-OCI Packer templates.
+Oracle Cloud Infrastructure (OCI) compatible templates.
 
 ## Prerequisites
 - Fedora Linux 40+ | Oracle Linux 10+ | CentOS Stream | RHEL 10+ workstation.
@@ -15,7 +15,7 @@ Run the following commands:
 	$ sudo dnf install -y tigervnc guestfs-tools qemu-img qemu-kvm dnf-plugins-core packer
 	$ sudo cp /usr/libexec/qemu-kvm /usr/bin/qemu-system-x86_64
 
-## Building the images
+## Building
 Change directory to `win2k22`,  modify `variables.auto.pkrvars.hcl` to fit your current setup. Make sure all parameters (e.g `disk_size`, `http_port_max`, `http_port_min`, `iso_url`) are set accordingly.
 Then run:
 
@@ -27,8 +27,8 @@ The building should take about 25-30 minutes to finish.
 
 ## NOTES
 The `qemu-kvm` binary which is shipped with Oracle Linux 9 does not come with precompiled GUI features (like `gtk` or `sdl`).
-So in order to actually see the progress of the build we use `["-display", "vnc=localhost:0"]]` in our packer templates and run
-`vncviewer localhost:0` in another terminal on the same bare metal to display it.
+So in order to actually see the progress of the build try to use `["-display", "vnc=localhost:0"]]` arg for `qemuargs` attribute in the templates and run
+`vncviewer localhost:0` in another terminal to visualize it.
 
 
 ## ERRORS
