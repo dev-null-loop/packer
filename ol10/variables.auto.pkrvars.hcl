@@ -26,7 +26,8 @@ iso_checksum        = "none"
 output_directory    = "ol10-x64-{{isotime `20060102`}}"
 qemuargs = [
   ["-m", "2048"],
-  ["-cpu", "host"]
+  ["-cpu", "host"],
+  ["-vga", "virtio"]
 ]
 shutdown_command = "echo \"uname -a > /etc/buildID; date +%Y%m%d >> /etc/buildID; rpm -qa | sort > /etc/packages.log; sed -i '/uname/d' /etc/rc.d/rc.local && shutdown -h now\" >> /etc/rc.d/rc.local; reboot"
 skip_compaction  = false
