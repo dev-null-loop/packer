@@ -1,7 +1,8 @@
 boot_command = [
-  "<up><tab>",
-  "net.ifnames=1",
-  "inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/OracleLinux-R9-U0-x86_64.ks",
+  "<up>",
+  "<tab>",
+  " net.ifnames=1",
+  " inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/OracleLinux-R9-U0-x86_64.ks",
   "<enter>"
 ]
 boot_wait        = "5s"
