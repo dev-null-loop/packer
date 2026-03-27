@@ -1,6 +1,6 @@
 build {
   sources = [
-    "qemu.ol10-x64"
+    "qemu.OracleLinux-R10-U1-x86_64"
   ]
   # post-processor "shell-local" {
   #   inline = [
@@ -9,7 +9,7 @@ build {
   # }
 }
 
-source "qemu" "ol10-x64" {
+source "qemu" "OracleLinux-R10-U1-x86_64" {
   boot_command     = var.boot_command
   boot_wait        = var.boot_wait
   disk_size        = var.disk_size

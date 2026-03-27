@@ -10,7 +10,7 @@ boot_command = [
   "<spacebar>",
   "inst.text",
   "<spacebar>",
-  "inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ol10-x64.ks",
+  "inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/OracleLinux-R10-U1-x86_64.ks",
   "<spacebar>",
   "<leftCtrlOn>x<leftCtrlOff>",
 ]
@@ -23,7 +23,7 @@ use_default_display = true
 http_port_max       = 8888
 http_port_min       = 8888
 iso_checksum        = "none"
-output_directory    = "ol10-x64-{{isotime `20060102`}}"
+output_directory    = "OracleLinux-R10-U1-x86_64-{{isotime `20060102`}}"
 qemuargs = [
   ["-m", "2048"],
   ["-cpu", "host"],
@@ -32,9 +32,9 @@ qemuargs = [
 shutdown_command = "echo \"uname -a > /etc/buildID; date +%Y%m%d >> /etc/buildID; rpm -qa | sort > /etc/packages.log; sed -i '/uname/d' /etc/rc.d/rc.local && shutdown -h now\" >> /etc/rc.d/rc.local; reboot"
 skip_compaction  = false
 disk_compression = true
-ssh_password     = "oraclelinux10"
+ssh_password     = "OracleLinux-R10-U1-x86_64"
 ssh_username     = "root"
-ssh_wait_timeout = "15m"
+ssh_wait_timeout = "20m"
 vm_name          = "{{build_name}}-{{isotime `20060102`}}.qcow2"
 net_device       = "virtio-net"
 disk_interface   = "virtio-scsi"
