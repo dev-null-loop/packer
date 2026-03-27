@@ -2,17 +2,18 @@ text
 skipx
 lang en_US.UTF-8
 keyboard us
+timezone UTC --utc
 network --bootproto=dhcp --device=eth0 --onboot=yes --ipv6=auto --hostname=localhost.localdomain
 repo --name="AppStream" --baseurl=https://yum.oracle.com/repo/OracleLinux/OL9/appstream/x86_64 --cost=0
-firewall --service=ssh
 selinux --enforcing
-bootloader --append=" crashkernel=auto LANG=en_US.UTF-8 console=tty0 console=ttyS0 rd.luks=0 rd.md=0 rd.dm=0 rd.iscsi.bypass=1 netroot=iscsi:169.254.0.2:::1:iqn.2015-02.oracle.boot:uefi iscsi_param=node.session.timeo.replacement_timeout=6000 net.ifnames=1 nvme_core.shutdown_timeout=10 ipmi_si.tryacpi=0 ipmi_si.trydmi=0 ipmi_si.trydefaults=0 libiscsi.debug_libiscsi_eh=1 loglevel=4" --location=mbr
+firewall --service=ssh
+services --enabled=sshd
+bootloader --location=mbr --append=" crashkernel=auto LANG=en_US.UTF-8 console=tty0 console=ttyS0 rd.luks=0 rd.md=0 rd.dm=0 rd.iscsi.bypass=1 netroot=iscsi:169.254.0.2:::1:iqn.2015-02.oracle.boot:uefi iscsi_param=node.session.timeo.replacement_timeout=6000 net.ifnames=1 nvme_core.shutdown_timeout=10 ipmi_si.tryacpi=0 ipmi_si.trydmi=0 ipmi_si.trydefaults=0 libiscsi.debug_libiscsi_eh=1 loglevel=4"
 zerombr
 clearpart --all --initlabel
 part / --fstype=xfs --size=100 --grow --asprimary
-rootpw pM0dularc
-authselect --enableshadow --passalgo=sha512 --enablefingerprint
-timezone --utc Etc/GMT
+rootpw --plaintext OracleLinux-R9-U0-x86_64
+#authselect --enableshadow --passalgo=sha512 --enablefingerprint
 reboot
 
 %packages

@@ -1,5 +1,5 @@
 build {
-  source "qemu.ol9-x64" {}
+  source "qemu.OracleLinux-R9-U0-x86_64" {}
 
   post-processor "shell-local" {
     inline = [

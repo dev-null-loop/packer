@@ -1,4 +1,4 @@
-source "qemu" "ol9-x64" {
+source "qemu" "OracleLinux-R9-U0-x86_64" {
   boot_command     = var.boot_command
   boot_wait        = var.boot_wait
   disk_size        = var.disk_size
