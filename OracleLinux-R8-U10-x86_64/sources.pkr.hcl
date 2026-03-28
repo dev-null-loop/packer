@@ -1,4 +1,13 @@
-source "qemu" "ol8-x64" {
+build {
+  source "qemu.OracleLinux-R8-U10-x86_64" {}
+  # post-processor "shell-local" {
+  #   inline = [
+  #     "virt-sysprep -a ${var.output_directory}/${var.vm_name}"
+  #   ]
+  # }
+}
+
+source "qemu" "OracleLinux-R8-U10-x86_64" {
   boot_command     = var.boot_command
   boot_wait        = var.boot_wait
   disk_size        = var.disk_size
